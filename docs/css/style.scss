@@ -1,95 +1,110 @@
 @import "../css/_bootstrap.scss";
-
-@font-face {
-  font-family: 'mplus-1c-thin';
-  src: url('../fonts/mplus-1c-thin.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-       url('../fonts/mplus-1c-thin.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}
-
-@font-face {
-  font-family: 'mplus-1c-light';
-  src: url('../fonts/mplus-1c-light.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-       url('../fonts/mplus-1c-light.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 
 body {
-  font-family: mplus-1c-light,"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Noto Sans Japanese', sans-serif;
   font-size: 16px;
   line-height: 2;
 }
 
 h2{
-  font-family: mplus-1c-light,"Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size:2em;
-  line-height: 1.5em;
-  color:#0645AD;
-  margin-bottom: 24px;
+	font-family: 'Noto Sans Japanese', sans-serif;
+  font-size:1.75em;
+  line-height: 1em;
+  font-weight: 300;
+  color:#808080;
 }
 
 h3{
-  font-family: mplus-1c-light,"Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size:1.6em;
-  line-height: 1.5em;
-  color:#00ACED;
-  margin-bottom: 20px;
+	font-family: 'Noto Sans Japanese', sans-serif;
+  font-size:1.25em;
+  line-height: 1em;
+  font-weight: 300;
+  color:#808080;
 }
-
+h3.blue{
+  color: #2FADC9;
+}
+h3.yellow{
+  color: #FFA341;
+}
+h3.green{
+  color: #67AB67;
+}
 h3.red{
-  color:rgb(173, 6, 6);
+  color: #FF858E;
 }
 
 header{
   background-image: url("../images/bg_header.png");
-  background-size:cover;
-  padding:32px 0;
+  background-size: cover;
+  background-position-x: center;
+  padding: 0 0 32px 0;
+}
+header div.container{
+  position: absolute;
+  bottom: -32px;
+  background-position: bottom left;
+  background-image: url("../images/bg_blue.png");
+  background-repeat: repeat-x; 
+  width: 100%;
 }
 
-.btn_download a{
-  margin:0 16px 0 0;
-}
-
-.btn_download a:hover img{
-  opacity:0.8;
-  filter:alpha(opacity=80);
-  -ms-filter: “alpha( opacity=80 )”;
-}
-
-.btn_download a:last-child{
-  margin:0;
+a.btn_download:hover img{
+  opacity:0.7;
+  filter:alpha(opacity=70);
+  -ms-filter: “alpha( opacity=70 )”;
 }
 
 section{
-  padding:48px 0;
+  padding:30px 0;
 }
 
 footer{
-  background:#00ACED;
-  padding: 16px 0;
+  background:#1BB0FF;
+  padding: 30px 0;
 }
 
 small{
   color: #fff;
   font-size: 0.75em;
+  font-weight: 100;
 }
 
 .mb10{
   margin-bottom:10px;
 }
 
-.mb24{
-  margin-bottom:24px;
+.mb20{
+  margin-bottom:20px;
 }
 
-.mr16{
-  margin-right:16px;
+.mb30{
+  margin-bottom:30px;
+}
+
+.mt30{
+  margin-top:30px;
 }
 
 .mb40{
   margin-bottom:40px;
 }
 
-.bg-gray{
-  background: rgb(239, 249, 252);
+.bg-blue{
+  background: #E0F7FA;
+}
+
+.bg-yellow{
+  background: #FFFDE7;
+}
+
+.bg-green{
+  background: #F1F8E9;
+}
+
+.bg-red{
+  background: #FFEBEE;
 }
 
 .img-responsive-adjust{
@@ -98,27 +113,43 @@ small{
   vertical-align: top;
 }
 
-.img-responsive-adjust90{
-  max-width: 90%;
-  height: auto;
-  vertical-align: top;
-}
-
-.sns{
+.func{
   list-style-type: none;
   padding-left: 0;
-  padding-top: 40px;
+  padding-top: 20px;
+  line-height: 1.25em;  
 }
-.sns li {
-  margin-bottom: 8px;
-}
-.sns iframe {
-  margin: 0 !important;
+.func li {
+  margin-bottom: 16px;
 }
 
-.btn_appstore{
-  pointer-events:none;/*リンクを非リンクに変える*/
-  cursor:default;/*マウスカーソルを矢印のまま変えない*/
+.media{
+  list-style-type: none;
+  padding-left: 0;
+  padding-top: 20px;
+  line-height: 1.25em;  
+}
+.media li {
+  margin-bottom: 16px;
+  padding-left: 30px;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+.media li.apple {
+  background-image: url("../images/icon_apple.png");
+}
+.media li.book {
+  background-image: url("../images/icon_book.png");
+}
+.media li.tv {
+  background-image: url("../images/icon_tv.png");
+}
+.media li.web {
+  background-image: url("../images/icon_web.png");
+}
+
+.sns iframe {
+  margin: 0 !important;
 }
 
 @media (max-width: 767px) {
