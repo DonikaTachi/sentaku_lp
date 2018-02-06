@@ -117,7 +117,7 @@ small{
   list-style-type: none;
   padding-left: 0;
   padding-top: 20px;
-  line-height: 1.25em;  
+  line-height: 1.5em;  
 }
 .func li {
   margin-bottom: 16px;
@@ -127,12 +127,12 @@ small{
   list-style-type: none;
   padding-left: 0;
   padding-top: 20px;
-  line-height: 1.25em;  
+  line-height: 1.6em;
 }
 .media li {
   margin-bottom: 16px;
   padding-left: 30px;
-  background-position: top left;
+  background-position: 0em 0.1em;
   background-repeat: no-repeat;
 }
 .media li.apple {
@@ -152,17 +152,39 @@ small{
   margin: 0 !important;
 }
 
-@media (max-width: 767px) {
-  section{
-    padding:24px 0;
-  }
-  .btn_download a{
-    display:block;
-    margin:0 0 16px 0;
-  }
-  .btn_download a:last-child{
-    margin:0;
+@media screen and (min-width:640px) { 
+  .w640{
+    display: none;
   }
 }
 
-
+@media screen and (max-width:641px) { 
+  .w641{
+    display: none;
+  }
+  body {
+    font-size: 14px;
+  }
+  h2{
+    font-size:1.5em;
+  }
+  h3{
+    font-size:1.25em;
+  }
+  header div.bg_iphone{
+    background-image: url("../images/m_iphone.png");
+    background-repeat: no-repeat;
+    background-size: 480px;
+    background-position: right 0 bottom 10%;
+    background-position-x: center;
+    padding: 0 0 0 0;
+  }
+  header div.container{
+    background-image: url("../images/m_bg_blue.png");
+    background-size: 100% 25%;
+  }
+  .media{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
